@@ -14,53 +14,13 @@ A Chrome browser extension that helps identify potential business leads on X (fo
 
 ### Method 1: Manual Installation (Developer Mode)
 1. Download or clone this repository
-2. Create the required icon files (see Icon Setup below)
-3. Open Chrome and navigate to `chrome://extensions/`
-4. Enable "Developer mode" in the top right corner
-5. Click "Load unpacked" and select the extension folder
-6. The extension icon should appear in your Chrome toolbar
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" in the top right corner
+4. Click "Load unpacked" and select the extension folder
+5. The extension icon should appear in your Chrome toolbar
 
 ### Method 2: Chrome Web Store (Coming Soon)
 _This extension is currently in development and not yet published to the Chrome Web Store._
-
-## Icon Setup
-
-The extension requires three icon files. You can create them easily using any image editor or online tool:
-
-### Quick Icon Generation
-1. **Create a simple icon** (or use text "XS" for "X Scraper") 
-2. **Use an online icon generator** like [favicon.io](https://favicon.io/favicon-generator/) or [canva.com](https://www.canva.com/)
-3. **Generate these sizes:**
-   - `icon16.png` - 16x16 pixels (toolbar)
-   - `icon48.png` - 48x48 pixels (extension management) 
-   - `icon128.png` - 128x128 pixels (Chrome Web Store)
-
-### Manual Creation
-If creating manually, use these specifications:
-- **Background**: Blue (#1d9bf0) or transparent
-- **Icon**: White magnifying glass or "XS" text
-- **Format**: PNG with transparency
-- **Quality**: Sharp edges, readable at small sizes
-
-### Icon Placement
-```
-icons/
-├── icon16.png
-├── icon48.png
-└── icon128.png
-```
-
-### Alternative: Skip Icons Temporarily
-For testing, you can temporarily remove icon references from `manifest.json`:
-```json
-{
-  "action": {
-    "default_popup": "popup/popup.html",
-    "default_title": "X Lead Scraper"
-  }
-}
-```
-Chrome will use a default icon until you add custom ones.
 
 ## Usage
 
