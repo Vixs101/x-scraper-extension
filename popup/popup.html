@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        width: 350px;
+        min-height: 400px;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        margin: 0;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .header h1 {
+        margin: 0;
+        color: #1d9bf0;
+        font-size: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #0f1419;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #cfd9de;
+        border-radius: 6px;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: #1d9bf0;
+        box-shadow: 0 0 0 2px rgba(29, 155, 240, 0.1);
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px;
+        background: #1d9bf0;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .btn:hover {
+        background: #1a8cd8;
+      }
+
+      .btn:disabled {
+        background: #8b98a5;
+        cursor: not-allowed;
+      }
+
+      .status {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      .status.success {
+        background: #e8f5e8;
+        color: #0f5132;
+        border: 1px solid #badbcc;
+      }
+
+      .status.error {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c2c7;
+      }
+
+      .status.loading {
+        background: #cff4fc;
+        color: #055160;
+        border: 1px solid #b3e5fc;
+      }
+
+      .results {
+        margin-top: 20px;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+
+      .result-item {
+        padding: 10px;
+        border: 1px solid #e1e8ed;
+        border-radius: 6px;
+        margin-bottom: 8px;
+        font-size: 12px;
+      }
+
+      .result-username {
+        font-weight: bold;
+        color: #1d9bf0;
+        margin-bottom: 4px;
+      }
+
+      .result-text {
+        color: #536471;
+        line-height: 1.3;
+      }
+
+      .business-indicator {
+        display: inline-block;
+        background: #e8f5e8;
+        color: #0f5132;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 10px;
+        margin-top: 4px;
+      }
+
+      .export-btn {
+        width: 100%;
+        padding: 8px;
+        background: #10a37f;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 12px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .export-btn:hover {
+        background: #0d8b72;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>X Lead Scraper</h1>
+    </div>
+
+    <div class="form-group">
+      <label for="maxResults">Max Results:</label>
+      <select id="maxResults">
+        <option value="10">10 results</option>
+        <option value="20" selected>20 results</option>
+        <option value="30">30 results</option>
+        <option value="50">50 results</option>
+      </select>
+    </div>
+
+    <button id="scrapeBtn" class="btn">Start Scraping Current Page</button>
+
+    <div id="status"></div>
+
+    <div id="results" class="results" style="display: none"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
